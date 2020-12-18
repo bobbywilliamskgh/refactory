@@ -1,0 +1,17 @@
+{
+    "partners": [{
+        "id":1,
+        "photo_url": "https://i1.wp.com/refactory.id/wp-content/uploads/2020/01/qasir.png?fit=84%2C27&ssl=1",
+        "name":"nama partner"
+    },
+    {
+        "id":2,
+        "photo_url": "https://i0.wp.com/refactory.id/wp-content/uploads/2020/02/ESDM-1.png?fit=68%2C65&ssl=1",
+        "name":"nama partner"
+    },
+    {
+        "id":3,
+        "photo_url": "https://i1.wp.com/refactory.id/wp-content/uploads/2020/01/keller-white-2.png?fit=188%2C45&ssl=1",
+        "name":"nama partner"
+    }]
+}

@@ -8,7 +8,7 @@ class DBHelper {
       path.join(dbPath, 'auth.db'),
       onCreate: (db, version) {
         return db.execute(
-          'CREATE TABLE login_story(id TEXT PRIMARY KEY, email TEXT, login_count TEXT)',
+          'CREATE TABLE login_story(id TEXT PRIMARY KEY, email TEXT, login_count INTEGER)',
         );
       },
       version: 1,
@@ -24,8 +24,24 @@ class DBHelper {
     );
   }
 
-  static Future<List<Map<String, dynamic>>> getData(String table) async {
+  static Future<List<Map<String, dynamic>>> getData(
+      String table, String email) async {
     final sqlDb = await DBHelper.getDatabase();
-    return sqlDb.query(table);
+    return sqlDb.query(
+      table,
+      columns: ['id', 'email', 'login_count'],
+      where: 'email = ?',
+      whereArgs: [email],
+    );
+  }
+
+  static Future<void> update(String table, Map<String, dynamic> data) async {
+    final sqlDb = await DBHelper.getDatabase();
+    await sqlDb.update(
+      table,
+      data,
+      where: 'email = ?',
+      whereArgs: [data['email']],
+    );
   }
 }

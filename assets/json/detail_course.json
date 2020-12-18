@@ -1,0 +1,81 @@
+{
+    "id": 1,
+    "short-description": "Hai Refactorian, pada course ini kita akan belajar mengenal apa itu HTML dan CSS, mengenal dasar-dasarnya, mengetahui bagaimana cara menggunakannya dan lain-lain. simak videonya dan jangan lupa untuk praktikan.",
+    "quistion": "Alasan Mempelajari HTML dan CSS",
+    "answer": "Setiap web developer harus memiliki pengetahuan dasar setidaknya HTML dan CSS, dari mempelajari HTML dan CSS dalam course ini harapannya peserta akan lebih paham bagaimana konsep dasar pengembangan website.",
+    "quistion-photo": "https://cdn.fs.teachablecdn.com/KeagvIv6QC6TQCzyKzrL",
+    "materi-course": [
+        {
+            "id": 1,
+            "section": "HTML Dasar",
+            "data": [
+                {
+                    "id": 1,
+                    "title": "Pengenalan HTML",
+                    "url": "https://course.refactory.id/p/html-css-introduction",
+                    "time-in": "5:45"
+                },
+                {
+                    "id": 1,
+                    "title": "Pengenalan HTML",
+                    "url": "https://course.refactory.id/p/html-css-introduction",
+                    "time-in": "5:45"
+                },
+                {
+                    "id": 1,
+                    "title": "Pengenalan HTML",
+                    "url": "https://course.refactory.id/p/html-css-introduction",
+                    "time-in": "5:45"
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "section": "HTML Dasar",
+            "data": [
+                {
+                    "id": 1,
+                    "title": "Pengenalan HTML",
+                    "url": "https://course.refactory.id/p/html-css-introduction",
+                    "time-in": "5:45"
+                },
+                {
+                    "id": 1,
+                    "title": "Pengenalan HTML",
+                    "url": "https://course.refactory.id/p/html-css-introduction",
+                    "time-in": "5:45"
+                },
+                {
+                    "id": 1,
+                    "title": "Pengenalan HTML",
+                    "url": "https://course.refactory.id/p/html-css-introduction",
+                    "time-in": "5:45"
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "section": "HTML Dasar",
+            "data": [
+                {
+                    "id": 1,
+                    "title": "Pengenalan HTML",
+                    "url": "https://course.refactory.id/p/html-css-introduction",
+                    "time-in": "5:45"
+                },
+                {
+                    "id": 1,
+                    "title": "Pengenalan HTML",
+                    "url": "https://course.refactory.id/p/html-css-introduction",
+                    "time-in": "5:45"
+                },
+                {
+                    "id": 1,
+                    "title": "Pengenalan HTML",
+                    "url": "https://course.refactory.id/p/html-css-introduction",
+                    "time-in": "5:45"
+                }
+            ]
+        }
+    ]
+}

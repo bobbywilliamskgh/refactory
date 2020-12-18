@@ -1,0 +1,20 @@
+{
+    "asSeenOns": [{
+        "id":1,
+        "photo_url":"https://i2.wp.com/refactory.id/wp-content/uploads/2020/01/press-idntimes-logo.png?fit=212%2C35&ssl=1",
+        "link_url":"https://tech.idntimes.com/trend/indra/bukti-belajar-coding-itu-keren-refactory-resmi-wisuda-13-lulusan-siap-saing",
+        "name":"nama meliput"
+    },
+    {
+        "id":2,
+        "photo_url":"https://i0.wp.com/refactory.id/wp-content/uploads/2020/01/press-cnn-indonesia-logo.png?fit=227%2C51&ssl=1",
+        "link_url":"https://www.cnnindonesia.com/teknologi/20171007074240-192-246767/menakar-peluang-karier-ahli-bahasa-pemrograman-di-indonesia/",
+        "name":"nama meliput"
+    },
+    {
+        "id":3,
+        "photo_url": "https://i2.wp.com/refactory.id/wp-content/uploads/2020/07/media-indonesia-300x180-1.png?fit=300%2C180&ssl=1",
+        "link_url":"",
+        "name":"http://mediaindonesia.com/news/read/122152/5-peluang-pekerjaan-untuk-para-coder/2017-09-13"
+    }]
+}
