@@ -17,8 +17,11 @@ class _AuthFormState extends State<AuthForm> {
   var _isLogin = true;
   var _userEmail = '';
   var _username = '';
-  var _userPassword = '';
   File _userImageFile;
+
+  void _pickedImage(File image) {
+    _userImageFile = image;
+  }
 
   Future<void> _submit() async {
     final isValid = _formKey.currentState.validate();
@@ -66,6 +69,7 @@ class _AuthFormState extends State<AuthForm> {
               'count': loginCount,
               'username': _username,
               'email': _userEmail,
+              'isSubmitEmail': false,
             },
           );
         }
@@ -75,7 +79,7 @@ class _AuthFormState extends State<AuthForm> {
           Scaffold.of(context).showSnackBar(
             SnackBar(
               content: Text(
-                'Anda sudah pernah melakukan registrasi dengan email ini dan telah login sebanyak $loginCount kali',
+                'Anda sudah pernah melakukan registrasi dengan email ini dan telah login sebanyak ${loginCount - 1} kali',
                 textAlign: TextAlign.center,
               ),
               backgroundColor: Theme.of(context).errorColor,
@@ -86,8 +90,15 @@ class _AuthFormState extends State<AuthForm> {
             _userEmail,
             loginCount,
           );
-          Navigator.of(context)
-              .pushReplacementNamed(TabPage.routeName, arguments: loginCount);
+          Navigator.of(context).pushReplacementNamed(
+            TabPage.routeName,
+            arguments: {
+              'count': loginCount,
+              'username': _username,
+              'email': _userEmail,
+              'isSubmitEmail': true,
+            },
+          );
         }
       }
     }
@@ -105,7 +116,7 @@ class _AuthFormState extends State<AuthForm> {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                if (!_isLogin) UserImagePicker(),
+                if (!_isLogin) UserImagePicker(_pickedImage),
                 TextFormField(
                   key: ValueKey('email'),
                   validator: (value) {
@@ -146,11 +157,9 @@ class _AuthFormState extends State<AuthForm> {
                   },
                   decoration: InputDecoration(labelText: 'Password'),
                   obscureText: true,
-                  onSaved: (value) {
-                    _userPassword = value;
-                  },
+                  onSaved: (value) {},
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 12,
                 ),
                 RaisedButton(

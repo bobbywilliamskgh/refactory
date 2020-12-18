@@ -9,7 +9,7 @@ class ProgrammingCourseInfo extends StatelessWidget {
       child: Column(
         children: [
           Image.asset('assets/images/man_and_laptop.jpg'),
-          SizedBox(
+          const SizedBox(
             height: 16,
           ),
           Text(
@@ -18,7 +18,7 @@ class ProgrammingCourseInfo extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 16,
           ),
           Text(
@@ -27,7 +27,7 @@ class ProgrammingCourseInfo extends StatelessWidget {
               color: Colors.black54,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 16,
           ),
           Text(
@@ -36,7 +36,7 @@ class ProgrammingCourseInfo extends StatelessWidget {
               color: Colors.black54,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 16,
           ),
           Text(
@@ -45,7 +45,7 @@ class ProgrammingCourseInfo extends StatelessWidget {
               color: Colors.black54,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 16,
           ),
           Text(
@@ -54,7 +54,7 @@ class ProgrammingCourseInfo extends StatelessWidget {
               color: Colors.black54,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 32,
           ),
           RaisedButton(

@@ -19,7 +19,7 @@ class CourseReportOverview extends StatelessWidget {
                 'MEET OUR GRADUATES',
                 style: TextStyle(color: Colors.black45),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 16,
               ),
               Text(
@@ -28,7 +28,7 @@ class CourseReportOverview extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 16,
               ),
               RichText(
@@ -57,17 +57,33 @@ class CourseReportOverview extends StatelessWidget {
           future: DefaultAssetBundle.of(context)
               .loadString('assets/json/alumni_report.json'),
           builder: (context, snapshot) {
-            final List<AlumniReport> alumniReports =
-                getAlumniReports(snapshot.data);
-            return ListView.builder(
-              scrollDirection: Axis.vertical,
-              shrinkWrap: true,
-              physics: NeverScrollableScrollPhysics(),
-              itemCount: alumniReports.length,
-              itemBuilder: (context, index) {
-                return CourseReportItem(alumniReports[index]);
-              },
-            );
+            if (snapshot.connectionState != ConnectionState.done) {
+              return Center(
+                child: CircularProgressIndicator(),
+              );
+            } else {
+              if (snapshot.hasData) {
+                final List<AlumniReport> alumniReports =
+                    getAlumniReports(snapshot.data);
+                return ListView.builder(
+                  scrollDirection: Axis.vertical,
+                  shrinkWrap: true,
+                  physics: NeverScrollableScrollPhysics(),
+                  itemCount: alumniReports.length,
+                  itemBuilder: (context, index) {
+                    return CourseReportItem(alumniReports[index]);
+                  },
+                );
+              } else if (snapshot.hasError) {
+                return Center(
+                  child: Text('Gagal memuat data'),
+                );
+              } else {
+                return Center(
+                  child: CircularProgressIndicator(),
+                );
+              }
+            }
           },
         )
       ],
@@ -112,34 +128,34 @@ class CourseReportItem extends StatelessWidget {
               height: 200,
               child: Image.network(alumniReport.user.photoUrl),
             ),
-            SizedBox(
+            const SizedBox(
               height: 16,
             ),
             Text(
               alumniReport.user.name,
               style: Theme.of(context).textTheme.bodyText1,
             ),
-            SizedBox(
+            const SizedBox(
               height: 32,
             ),
             Text(
               alumniReport.user.from,
               style: TextStyle(color: Colors.grey),
             ),
-            SizedBox(
+            const SizedBox(
               height: 32,
             ),
             Row(
               children: starIcons(alumniReport.star),
             ),
-            SizedBox(
+            const SizedBox(
               height: 32,
             ),
             Text(
               alumniReport.title,
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
-            SizedBox(
+            const SizedBox(
               height: 16,
             ),
             Text(

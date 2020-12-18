@@ -17,7 +17,7 @@ class AboutCourse extends StatelessWidget {
             'Tentang Course',
             style: Theme.of(context).textTheme.headline5,
           ),
-          SizedBox(
+          const SizedBox(
             height: 32,
           ),
           Text(

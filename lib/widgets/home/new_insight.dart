@@ -20,14 +20,14 @@ class NewInsight extends StatelessWidget {
                         color: Colors.grey,
                       ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 16,
                 ),
                 Text(
                   'Knowledge Sharing',
                   style: Theme.of(context).textTheme.headline6.copyWith(),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 64,
                 ),
                 GestureDetector(

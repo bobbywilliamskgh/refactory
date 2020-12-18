@@ -63,7 +63,7 @@ class Description extends StatelessWidget {
                         ],
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 16,
                     ),
                     RichText(
@@ -112,7 +112,7 @@ class Description extends StatelessWidget {
                         ],
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 50,
                     ),
                     RaisedButton(
@@ -121,7 +121,7 @@ class Description extends StatelessWidget {
                         'Temukan Solusi Anda',
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     RaisedButton(

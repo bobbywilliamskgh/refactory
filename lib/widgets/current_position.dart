@@ -15,7 +15,7 @@ class CurrentPosition extends StatelessWidget {
             'Posisi saat ini :',
             style: TextStyle(color: Theme.of(context).accentColor),
           ),
-          SizedBox(
+          const SizedBox(
             height: 8,
           ),
           if (userLocation == null)

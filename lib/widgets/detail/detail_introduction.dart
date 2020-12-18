@@ -41,7 +41,7 @@ class DetailIntroduction extends StatelessWidget {
                     ),
                 textAlign: TextAlign.center,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 32,
               ),
               RichText(
@@ -76,7 +76,7 @@ class DetailIntroduction extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 32,
               ),
               RaisedButton(

@@ -40,7 +40,9 @@ class _TabPageState extends State<TabPage> {
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    showToast();
+    if (!widget.userData['isSubmitEmail']) {
+      showToast();
+    }
   }
 
   @override

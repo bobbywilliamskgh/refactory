@@ -15,17 +15,34 @@ class DetailCourse extends StatelessWidget {
       future: DefaultAssetBundle.of(context)
           .loadString('assets/json/detail_course.json'),
       builder: (context, snapshot) {
-        final DetailCourseResult detailCourse = getDetailCourse(snapshot.data);
-        return SingleChildScrollView(
-          child: Column(
-            children: [
-              DetailIntroduction(),
-              AboutCourse(detailCourse),
-              CourseSections(detailCourse),
-              QuestionAnswer(detailCourse),
-            ],
-          ),
-        );
+        if (snapshot.connectionState != ConnectionState.done) {
+          return Center(
+            child: CircularProgressIndicator(),
+          );
+        } else {
+          if (snapshot.hasData) {
+            final DetailCourseResult detailCourse =
+                getDetailCourse(snapshot.data);
+            return SingleChildScrollView(
+              child: Column(
+                children: [
+                  DetailIntroduction(),
+                  AboutCourse(detailCourse),
+                  CourseSections(detailCourse),
+                  QuestionAnswer(detailCourse),
+                ],
+              ),
+            );
+          } else if (snapshot.hasError) {
+            return Center(
+              child: Text('Gagal memuat data'),
+            );
+          } else {
+            return Center(
+              child: CircularProgressIndicator(),
+            );
+          }
+        }
       },
     );
   }

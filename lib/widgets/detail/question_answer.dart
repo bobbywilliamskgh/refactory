@@ -24,7 +24,7 @@ class QuestionAnswer extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 16,
           ),
           Text(
@@ -34,7 +34,7 @@ class QuestionAnswer extends StatelessWidget {
                 .headline5
                 .copyWith(fontWeight: FontWeight.bold),
           ),
-          SizedBox(
+          const SizedBox(
             height: 32,
           ),
           Text(answer),

@@ -10,17 +10,33 @@ class CourseListView extends StatelessWidget {
         'assets/json/list_course.json',
       ),
       builder: (context, snapshot) {
-        final List<Course> courseList = getCourses(snapshot.data);
-        print(courseList);
-        return ListView.builder(
-          scrollDirection: Axis.vertical,
-          shrinkWrap: true,
-          physics: NeverScrollableScrollPhysics(),
-          itemCount: courseList.length,
-          itemBuilder: (context, index) {
-            return CourseItem(courseList[index]);
-          },
-        );
+        if (snapshot.connectionState != ConnectionState.done) {
+          return Center(
+            child: CircularProgressIndicator(),
+          );
+        } else {
+          if (snapshot.hasData) {
+            final List<Course> courseList = getCourses(snapshot.data);
+            print(courseList);
+            return ListView.builder(
+              scrollDirection: Axis.vertical,
+              shrinkWrap: true,
+              physics: NeverScrollableScrollPhysics(),
+              itemCount: courseList.length,
+              itemBuilder: (context, index) {
+                return CourseItem(courseList[index]);
+              },
+            );
+          } else if (snapshot.hasError) {
+            return Center(
+              child: Text('Gagal memuat data'),
+            );
+          } else {
+            return Center(
+              child: CircularProgressIndicator(),
+            );
+          }
+        }
       },
     );
   }
@@ -65,14 +81,14 @@ class CourseItem extends StatelessWidget {
                           color: Theme.of(context).primaryColor,
                         ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Text(
                     course.shortDescription,
                     style: TextStyle(color: Theme.of(context).primaryColor),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 64,
                   ),
                   Row(
@@ -80,7 +96,7 @@ class CourseItem extends StatelessWidget {
                       CircleAvatar(
                         backgroundImage: NetworkImage(course.user.photoUrl),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
                       Text(course.user.name),

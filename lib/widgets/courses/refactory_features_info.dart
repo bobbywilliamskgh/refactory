@@ -26,14 +26,14 @@ class RefactoryFeaturesInfo extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 32,
           ),
           RaisedButton(
             onPressed: () {},
             child: Text('Pelajari Lebih'),
           ),
-          SizedBox(
+          const SizedBox(
             height: 32,
           ),
           Container(

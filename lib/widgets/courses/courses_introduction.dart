@@ -58,7 +58,7 @@ class CoursesIntroduction extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 16,
               ),
               Text(
@@ -68,7 +68,7 @@ class CoursesIntroduction extends StatelessWidget {
                       color: Colors.white,
                     ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
               RaisedButton(
@@ -79,7 +79,7 @@ class CoursesIntroduction extends StatelessWidget {
                   'Masuk & Memulai Belajar',
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               RaisedButton(

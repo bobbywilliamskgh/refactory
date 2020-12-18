@@ -18,11 +18,11 @@ class RefactoryHelp extends StatelessWidget {
                     ),
                 textAlign: TextAlign.center,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 64,
               ),
               Image.asset('assets/images/material_approval.png'),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               RichText(
@@ -43,7 +43,7 @@ class RefactoryHelp extends StatelessWidget {
                       ),
                     ]),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 16,
               ),
               Text(
@@ -54,11 +54,11 @@ class RefactoryHelp extends StatelessWidget {
                     .copyWith(color: Colors.grey),
                 textAlign: TextAlign.center,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 16,
               ),
               Image.asset('assets/images/material_bolt.png'),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               RichText(
@@ -79,7 +79,7 @@ class RefactoryHelp extends StatelessWidget {
                       ),
                     ]),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 16,
               ),
               Text(

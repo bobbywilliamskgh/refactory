@@ -16,11 +16,11 @@ class ListCoursePage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SelectCategory(),
-            SizedBox(
+            const SizedBox(
               height: 16,
             ),
             FindCourse(),
-            SizedBox(
+            const SizedBox(
               height: 16,
             ),
             CourseListView(),

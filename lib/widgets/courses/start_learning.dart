@@ -17,7 +17,7 @@ class StartLearning extends StatelessWidget {
                       color: Colors.white,
                     ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 32,
               ),
               RaisedButton(
@@ -39,7 +39,7 @@ class StartLearning extends StatelessWidget {
                     .caption
                     .copyWith(color: Theme.of(context).accentColor),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 32,
               ),
               Text(
